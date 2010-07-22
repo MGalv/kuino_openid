@@ -1,0 +1,2 @@
+module OpenidSessionsHelper
+end

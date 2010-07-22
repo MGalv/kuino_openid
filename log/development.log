@@ -1,0 +1,1394 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (92.7ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (173.5ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100722191000)
+  [4;36;1mSQL (138.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100722191000')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-22 14:25:45) [GET]
+Rendering users/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/users/new.html.haml:
+1: - form_for @user_session do |f|
+2:     = f.error_messages
+3:     %p
+4:         = f.label :username
+
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:231:in `form_for'
+    app/views/users/new.html.haml:1:in `_run_haml_app47views47users47new46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.2ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-22 14:31:38) [GET]
+Rendering users/new
+
+ActionView::TemplateError (undefined method `include?' for :form:Symbol) on line #1 of app/views/users/new.html.haml:
+1: = render :partial => :form
+
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (3.0.13) lib/haml/helpers.rb:90:in `non_haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/users/new.html.haml:1:in `_run_haml_app47views47users47new46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-22 14:31:59) [GET]
+Rendering users/new
+ERROR: compiling _run_haml_app47views47users47_form46html46haml_locals_form_object RAISED compile error
+/Users/mgalv/open_id/app/views/users/_form.html.haml:3: syntax error, unexpected $undefined, expecting ')'
+));}", 0, false);_hamlout.rstrip!;_hamlout.push_text("<p>\n  #{
+                                                          ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:5: syntax error, unexpected '}', expecting ')'
+));}\n  <br />\n  #{
+    ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:5: syntax error, unexpected tREGEXP_BEG, expecting kDO or '{' or '('
+));}\n  <br />\n  #{
+             ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:7: unknown regexp option - p
+/Users/mgalv/open_id/app/views/users/_form.html.haml:7: syntax error, unexpected '<'
+));}\n</p><p>\n  #{
+           ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:9: syntax error, unexpected '}', expecting ')'
+));}\n  <br />\n  #{
+    ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:9: syntax error, unexpected tREGEXP_BEG, expecting kDO or '{' or '('
+));}\n  <br />\n  #{
+             ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:11: unknown regexp option - p
+/Users/mgalv/open_id/app/views/users/_form.html.haml:11: syntax error, unexpected $undefined
+));}\n</p>\n<p>\n  #{
+           ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:11: syntax error, unexpected $undefined
+));}\n</p>\n<p>\n  #{
+                ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:13: syntax error, unexpected '}', expecting ')'
+));}\n  <bR></bR>\n  #{
+    ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:13: syntax error, unexpected '<'
+));}\n  <bR></bR>\n  #{
+             ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:15: unknown regexp option - p
+/Users/mgalv/open_id/app/views/users/_form.html.haml:15: syntax error, unexpected $undefined
+));}\n</p>\n<p>\n  #{
+           ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:15: syntax error, unexpected $undefined
+));}\n</p>\n<p>\n  #{
+                ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:17: syntax error, unexpected '}', expecting ')'
+));}\n  <br />\n  #{
+    ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:17: syntax error, unexpected tREGEXP_BEG, expecting kDO or '{' or '('
+));}\n  <br />\n  #{
+             ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:19: unknown regexp option - p
+/Users/mgalv/open_id/app/views/users/_form.html.haml:19: syntax error, unexpected $undefined
+));}\n</p>\n<p>\n  #{
+           ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:19: syntax error, unexpected $undefined
+));}\n</p>\n<p>\n  #{
+                ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:21: syntax error, unexpected '}', expecting ')'
+));}\n</p>\n", -1, true);end;_erbo...
+    ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:21: unterminated string meets end of file
+/Users/mgalv/open_id/app/views/users/_form.html.haml:21: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR
+Function body:           def _run_haml_app47views47users47_form46html46haml_locals_form_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];form = local_assigns[:form];;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:preserve=>["textarea", "pre", "code"], :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false, :escape_html=>false, :format=>:xhtml, :encoding=>nil, :attr_wrapper=>"'"});_erbout = _hamlout.buffer;__in_erb_template = true;; form_for @user do |f| %>;
+_hamlout.push_text("#{_hamlout.format_script_false_false_false_false_false_true_false(( f.error_messages %>
+));}", 0, false);_hamlout.rstrip!;_hamlout.push_text("<p>\n  #{
+_hamlout.adjust_tabs(1); _hamlout.format_script_false_false_false_false_false_true_false(( f.label :username
+));}\n  <br />\n  #{
+_hamlout.format_script_false_false_false_false_false_true_false(( f.text_field :username
+));}\n</p><p>\n  #{
+_hamlout.format_script_false_false_false_false_false_true_false(( f.label :email
+));}\n  <br />\n  #{
+_hamlout.format_script_false_false_false_false_false_true_false(( f.text_field :email
+));}\n</p>\n<p>\n  #{
+_hamlout.format_script_false_false_false_false_false_true_false(( f.label :password
+));}\n  <bR></bR>\n  #{
+_hamlout.format_script_false_false_false_false_false_true_false(( f.password_field :password
+));}\n</p>\n<p>\n  #{
+_hamlout.format_script_false_false_false_false_false_true_false(( f.label :password_confirmation
+));}\n  <br />\n  #{
+_hamlout.format_script_false_false_false_false_false_true_false(( f.password_field :password_confirmation
+));}\n</p>\n<p>\n  #{
+_hamlout.format_script_false_false_false_false_false_true_false(( f.submit "Submit"
+));}\n</p>\n", -1, true);end;_erbout;ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/mgalv/open_id/app/views/users/_form.html.haml:21:in `compile!'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/base.rb:267:in `render_without_haml'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/haml-3.0.13/rails/../lib/haml/helpers/action_view_mods.rb:11:in `render'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/haml-3.0.13/lib/haml/helpers.rb:90:in `non_haml'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/haml-3.0.13/rails/../lib/haml/helpers/action_view_mods.rb:11:in `render'
+/Users/mgalv/open_id/app/views/users/new.html.haml:1:in `_run_haml_app47views47users47new46html46haml'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render_without_haml'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/haml-3.0.13/rails/../lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/haml-3.0.13/rails/../lib/sass/plugin/rack.rb:41:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+/Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+/Users/mgalv/.rvm/gems/ruby-1.8.6-p399/gems/rails-2.3.8/lib/commands/server.rb:111
+/Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/mgalv/open_id/app/views/users/_form.html.haml:3: syntax error, unexpected $undefined, expecting ')'
+));}", 0, false);_hamlout.rstrip!;_hamlout.push_text("<p>\n  #{
+                                                          ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:5: syntax error, unexpected '}', expecting ')'
+));}\n  <br />\n  #{
+    ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:5: syntax error, unexpected tREGEXP_BEG, expecting kDO or '{' or '('
+));}\n  <br />\n  #{
+             ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:7: unknown regexp option - p
+/Users/mgalv/open_id/app/views/users/_form.html.haml:7: syntax error, unexpected '<'
+));}\n</p><p>\n  #{
+           ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:9: syntax error, unexpected '}', expecting ')'
+));}\n  <br />\n  #{
+    ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:9: syntax error, unexpected tREGEXP_BEG, expecting kDO or '{' or '('
+));}\n  <br />\n  #{
+             ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:11: unknown regexp option - p
+/Users/mgalv/open_id/app/views/users/_form.html.haml:11: syntax error, unexpected $undefined
+));}\n</p>\n<p>\n  #{
+           ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:11: syntax error, unexpected $undefined
+));}\n</p>\n<p>\n  #{
+                ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:13: syntax error, unexpected '}', expecting ')'
+));}\n  <bR></bR>\n  #{
+    ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:13: syntax error, unexpected '<'
+));}\n  <bR></bR>\n  #{
+             ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:15: unknown regexp option - p
+/Users/mgalv/open_id/app/views/users/_form.html.haml:15: syntax error, unexpected $undefined
+));}\n</p>\n<p>\n  #{
+           ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:15: syntax error, unexpected $undefined
+));}\n</p>\n<p>\n  #{
+                ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:17: syntax error, unexpected '}', expecting ')'
+));}\n  <br />\n  #{
+    ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:17: syntax error, unexpected tREGEXP_BEG, expecting kDO or '{' or '('
+));}\n  <br />\n  #{
+             ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:19: unknown regexp option - p
+/Users/mgalv/open_id/app/views/users/_form.html.haml:19: syntax error, unexpected $undefined
+));}\n</p>\n<p>\n  #{
+           ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:19: syntax error, unexpected $undefined
+));}\n</p>\n<p>\n  #{
+                ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:21: syntax error, unexpected '}', expecting ')'
+));}\n</p>\n", -1, true);end;_erbo...
+    ^
+/Users/mgalv/open_id/app/views/users/_form.html.haml:21: unterminated string meets end of file
+/Users/mgalv/open_id/app/views/users/_form.html.haml:21: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR) on line #3 of app/views/users/_form.html.haml:
+1: - form_for @user do |f| %>
+2:     = f.error_messages %>
+3:     %p>
+4:         = f.label :username
+5:         %br
+6:         = f.text_field :username
+
+    app/views/users/_form.html.haml:21:in `compile!'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (3.0.13) lib/haml/helpers.rb:90:in `non_haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/users/new.html.haml:1:in `_run_haml_app47views47users47new46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (147.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-22 14:32:23) [GET]
+Rendering users/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/users/_form.html.haml:
+1: - form_for @user do |f|
+2:     = f.error_messages
+3:     %p>
+4:         = f.label :username
+
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:231:in `form_for'
+    app/views/users/_form.html.haml:1:in `_run_haml_app47views47users47_form46html46haml_locals_form_object'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (3.0.13) lib/haml/helpers.rb:90:in `non_haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/users/new.html.haml:1:in `_run_haml_app47views47users47new46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-22 14:32:57) [GET]
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+
+ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:0x2277db8>) on line #1 of app/views/users/_form.html.haml:
+1: - form_for @user do |f|
+2:     = f.error_messages
+3:     %p>
+4:         = f.label :username
+
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:231:in `form_for'
+    app/views/users/_form.html.haml:1:in `_run_haml_app47views47users47_form46html46haml_locals_form_object'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (3.0.13) lib/haml/helpers.rb:90:in `non_haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/users/new.html.haml:1:in `_run_haml_app47views47users47new46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-22 14:33:26) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered users/_form (8.9ms)
+Completed in 20ms (View: 10, DB: 2) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-22 14:35:00) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered users/_form (8.8ms)
+Completed in 24ms (View: 14, DB: 2) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 14:39:04) [GET]
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0x239b53c>) on line #1 of app/views/users/index.html.haml:
+1: - if current_user
+2:     = link_to "Edit Profile", edit_user_path(:current)
+3:     |
+4:     = link_to "Logout", logout_path 
+
+    app/views/users/index.html.haml:1:in `_run_haml_app47views47users47index46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.7ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 14:41:19) [GET]
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0x21b766c>) on line #1 of app/views/users/index.html.haml:
+1: - if current_user
+2:     = link_to "Edit Profile", edit_user_path(:current)
+3:     |
+4:     = link_to "Logout", logout_path 
+
+    app/views/users/index.html.haml:1:in `_run_haml_app47views47users47index46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-22 14:41:26) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered users/_form (9.1ms)
+Completed in 29ms (View: 18, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-22 14:41:35) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"fdsf", "username"=>"sdfsdf", "password"=>"sdf", "email"=>"sdfsdf"}, "commit"=>"Submit", "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'sdfsdf') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'sdfsdf') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'ad4eb55e7447a48668bd309b40bff0c595d982213c135cb569686fa89f6cbdcf3a73ab0eed8dc577897cbb034a408ba623751fc5dfec00bd23b7c867b7ca17cb') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering users/new
+Rendered users/_form (11.9ms)
+Completed in 295ms (View: 13, DB: 3) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-22 14:42:10) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"123", "username"=>"aaa", "password"=>"123", "email"=>"a@a.com"}, "commit"=>"Submit", "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'a@a.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'aaa') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '813a42051c10e621b6faead97f59ca23d068a3d5d35eeb9edd3b69d4b36f71716a18bf84c2d2498fe2467c3b831956faa8d6103ab84b8c15b0ac95c838eab23e') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering users/new
+Rendered users/_form (9.0ms)
+Completed in 28ms (View: 10, DB: 3) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-22 14:42:21) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"1234", "username"=>"aaa", "password"=>"1234", "email"=>"a@a.com"}, "commit"=>"Submit", "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'a@a.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'aaa') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '07297eabebdc40a9733b662159ae19b522c51577b63129273fa6d25f29d9ca6814c85beb503106737d321209283a2cbc5d15ea32af6f7edacbfc576962b02c9b') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`updated_at`, `crypted_password`, `username`, `password_salt`, `persistence_token`, `email`, `created_at`) VALUES('2010-07-22 19:42:21', 'c0c8882bdca1534701e25037577e6f97ab7a2134da51a4c465b39071958ab0581a58a11658057bb99d0b7c5b7433e96ff72754a40482905aec7376b24f6076cd', 'aaa', 'vnJ7lCYXFhlJ0zs0NN6F', '07297eabebdc40a9733b662159ae19b522c51577b63129273fa6d25f29d9ca6814c85beb503106737d321209283a2cbc5d15ea32af6f7edacbfc576962b02c9b', 'a@a.com', '2010-07-22 19:42:21')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 20ms (DB: 3) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 14:42:21) [GET]
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0x22faad8>) on line #1 of app/views/users/index.html.haml:
+1: - if current_user
+2:     = link_to "Edit Profile", edit_user_path(:current)
+3:     |
+4:     = link_to "Logout", logout_path 
+
+    app/views/users/index.html.haml:1:in `_run_haml_app47views47users47index46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (126.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 14:46:11) [GET]
+Rendering users/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 16:05:05) [GET]
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0x23497c8>) on line #3 of app/views/users/index.html.haml:
+1: - flash.each do |name, msg|
+2:     = content_tag :div, msg, :id => "flash_#{name}"
+3: - if current_user
+4:     = link_to "Edit Profile", edit_user_path(:current)
+5:     |
+6:     = link_to "Logout", logout_path
+
+    app/views/users/index.html.haml:3:in `_run_haml_app47views47users47index46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 16:06:17) [GET]
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0x23cc9e8>) on line #4 of app/views/users/index.html.haml:
+1: - flash.each do |name, msg|
+2:     = content_tag :div, msg, :id => "flash_#{name}"
+3: debugger
+4: - if current_user
+5:     = link_to "Edit Profile", edit_user_path(:current)
+6:     |
+7:     = link_to "Logout", logout_path
+
+    app/views/users/index.html.haml:4:in `_run_haml_app47views47users47index46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (77.1ms)
+Rendered rescues/_request_and_response (2.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 16:06:26) [GET]
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0x25f2f88>) on line #4 of app/views/users/index.html.haml:
+1: - flash.each do |name, msg|
+2:     = content_tag :div, msg, :id => "flash_#{name}"
+3: -debugger
+4: - if current_user
+5:     = link_to "Edit Profile", edit_user_path(:current)
+6:     |
+7:     = link_to "Logout", logout_path
+
+    app/views/users/index.html.haml:4:in `_run_haml_app47views47users47index46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 16:07:47) [GET]
+Rendering users/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-22 16:07:50) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered users/_form (12.4ms)
+Completed in 40ms (View: 26, DB: 2) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-07-22 16:07:53) [GET]
+
+NameError (uninitialized constant UserSessionsController):
+  haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-07-22 16:08:16) [GET]
+
+NameError (uninitialized constant UserSessionsController):
+  haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-07-22 16:08:19) [GET]
+
+NameError (uninitialized constant UserSessionsController):
+  haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (124.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-07-22 16:08:29) [GET]
+
+NameError (uninitialized constant UserSessionsController):
+  haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (50.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-07-22 16:09:04) [GET]
+
+LoadError (Expected /Users/mgalv/open_id/app/controllers/user_sessions_controller.rb to define UserSessionsController):
+  haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-22 16:09:23) [GET]
+Rendering user_sessions/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/user_sessions/new.html.haml:
+1: - form_for @user_session do |f|
+2:     = f.error_messages
+3:     %p
+4:         = f.label :username
+
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:231:in `form_for'
+    app/views/user_sessions/new.html.haml:1:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-22 16:10:12) [GET]
+  [4;35;1mUserSession Columns (0.0ms)[0m   [0mMysql::Error: Table 'open_id_development.user_sessions' doesn't exist: SHOW FIELDS FROM `user_sessions`[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'open_id_development.user_sessions' doesn't exist: SHOW FIELDS FROM `user_sessions`):
+  app/controllers/user_sessions_controller.rb:4:in `new'
+  app/controllers/user_sessions_controller.rb:4:in `new'
+  haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100722191000)
+Migrating to CreateUserSessions (20100722195058)
+  [4;36;1mSQL (57.7ms)[0m   [0;1mCREATE TABLE `user_sessions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100722195058')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `user_sessions`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `user_sessions`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-22 16:12:24) [GET]
+  [4;36;1mUserSession Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `username' for #<UserSession id: nil, created_at: nil, updated_at: nil>) on line #6 of app/views/user_sessions/new.html.haml:
+3:     %p
+4:         = f.label :username
+5:         %br
+6:         = f.text_field :username
+7:     %p
+8:         = f.label :password
+9:         %br
+
+    app/views/user_sessions/new.html.haml:6:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:225:in `call'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:225:in `form_for'
+    haml (3.0.13) lib/haml/helpers.rb:588:in `call'
+    haml (3.0.13) lib/haml/helpers.rb:588:in `haml_bind_proc'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:231:in `form_for'
+    app/views/user_sessions/new.html.haml:1:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (160.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (46.7ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (145.2ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100722191000)
+  [4;36;1mSQL (104.6ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100722191000')[0m
+Migrating to CreateUserSessions (20100722211644)
+  [4;36;1mSQL (136.3ms)[0m   [0;1mCREATE TABLE `user_sessions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100722211644')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-22 16:19:23) [GET]
+  [4;35;1mUserSession Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+Rendering user_sessions/new
+Completed in 16ms (View: 8, DB: 2) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-22 16:19:29) [GET]
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered users/_form (8.7ms)
+Completed in 23ms (View: 10, DB: 2) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-22 16:19:46) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"1234", "username"=>"aaa", "password"=>"1234", "email"=>"aaa@aaa.com"}, "commit"=>"Submit", "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'aaa@aaa.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'aaa') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'c63170e082a1258031b1f15989537c91d6e56df13d1444ea9e4894972b6ead105731bee1248ccc3363229b88341b80b0c359b383f2421e68eb1b3f9e1e0701ee') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUserSession Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+
+NoMethodError (undefined method `activated?' for #<Class:0x2495f14>):
+  authlogic (2.1.5) lib/authlogic/acts_as_authentic/session_maintenance.rb:88:in `update_sessions?'
+  app/controllers/users_controller.rb:11:in `create'
+  haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (83.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-22 16:19:57) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"1234", "username"=>"aaa", "password"=>"1234", "email"=>"aaa@aaa.com"}, "commit"=>"Submit", "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'aaa@aaa.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'aaa') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '6df49890778f5ad804c3125f4177f55809e1788c1afdef8d47d1cddba64760eaab7f1dd523b3a53d9ce36198e422c1cf78ad9c1791833f984b9f2ccadd475d1b') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUserSession Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+
+NoMethodError (undefined method `activated?' for #<Class:0x2214a88>):
+  authlogic (2.1.5) lib/authlogic/acts_as_authentic/session_maintenance.rb:88:in `update_sessions?'
+  app/controllers/users_controller.rb:11:in `create'
+  haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-22 16:23:22) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered users/_form (7.8ms)
+Completed in 21ms (View: 9, DB: 2) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-22 16:23:27) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"werwer", "username"=>"wer", "password"=>"werwer", "email"=>"werwer"}, "commit"=>"Submit", "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'werwer') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'wer') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '09bf27d84073a9241696889e7eb8becbdb53ba74b9b5de0e2aefced1124336c193ee8b1a0d86e385734d2eb89a2b87668cf2aa4d33fe091f11f5f888d596d4d7') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering users/new
+Rendered users/_form (8.9ms)
+Completed in 31ms (View: 10, DB: 3) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-22 16:23:43) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"1234", "username"=>"werwer", "password"=>"1234", "email"=>"werwerw@hotmail.com"}, "commit"=>"Submit", "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'werwerw@hotmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'werwer') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '88e7a5edc518a02bf2edbe99ad8971692ce7a5355b54a589c39cedc9f70feb0f50245dd3d8dda9bd7a90373f1f2e5a3f3b20b5fc4d1c4e3e8868adc4becf1714') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUserSession Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+
+NoMethodError (undefined method `activated?' for #<Class:0x216d1e8>):
+  authlogic (2.1.5) lib/authlogic/acts_as_authentic/session_maintenance.rb:88:in `update_sessions?'
+  app/controllers/users_controller.rb:11:in `create'
+  haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (168.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-22 16:27:23) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"1234", "username"=>"werwer", "password"=>"1234", "email"=>"werwerw@hotmail.com"}, "commit"=>"Submit", "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'werwerw@hotmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'werwer') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '37a88b48ad35df2f56ca4a23fc5bcd22e052c3a1c0f032826bd053a094a980e57f54c1c76ee68ce9f238c4318f35766257cbe78f1ef6a8cb3e7dad516d4e41de') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUserSession Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+
+NoMethodError (undefined method `activated?' for #<Class:0x252d4f4>):
+  authlogic (2.1.5) lib/authlogic/acts_as_authentic/session_maintenance.rb:88:in `update_sessions?'
+  app/controllers/users_controller.rb:11:in `create'
+  haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.9ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-22 16:27:30) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"werwer", "username"=>"werwer", "password"=>"werwer", "email"=>"werwerw@hotmail.com"}, "commit"=>"Submit", "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'werwerw@hotmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'werwer') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '9015ba9aa50cdbdebedc9c34f1cdb254357c919be32b0387a1b5db9c523d6d2024d17250aca8987dc1c55f85b1ed899f0dd9b3477d205a1ea1873ca3f27c3370') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUserSession Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+
+NoMethodError (undefined method `activated?' for #<Class:0x221fbcc>):
+  authlogic (2.1.5) lib/authlogic/acts_as_authentic/session_maintenance.rb:88:in `update_sessions?'
+  app/controllers/users_controller.rb:11:in `create'
+  haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (165.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (52.2ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (144.2ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100722191000)
+  [4;36;1mSQL (93.6ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100722191000')[0m
+Migrating to CreateUserSessions (20100722211644)
+  [4;36;1mSQL (118.2ms)[0m   [0;1mCREATE TABLE `user_sessions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100722211644')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-22 16:44:56) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"werwer", "username"=>"werwer", "password"=>"werwer", "email"=>"werwerw@hotmail.com"}, "commit"=>"Submit", "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'werwerw@hotmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'werwer') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '7a8b5b964d828cd97d4325ce96a548ba59eeaa0b7b255dbd4e6ae8795405ee833f5179a9411b175847238a7d1ebd88bcce22d28a3099e6bcc4b0d02218b5962a') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUserSession Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+
+NoMethodError (undefined method `activated?' for #<Class:0x252d4cc>):
+  authlogic (2.1.5) lib/authlogic/acts_as_authentic/session_maintenance.rb:88:in `update_sessions?'
+  app/controllers/users_controller.rb:11:in `create'
+  haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (98.8ms)
+Rendered rescues/_request_and_response (2.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-22 16:53:41) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"werwer", "username"=>"werwer", "password"=>"werwer", "email"=>"werwerw@hotmail.com"}, "commit"=>"Submit", "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'werwerw@hotmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'werwer') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '7d996596611ce882e6cfbe28154460b1ee99e6bd8953bdb4c029d5cfb19c33d41112cd0b4ab25a2d7535f332c9fc2172fc55b68fb7f7395dd59969245c319025') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `crypted_password`, `username`, `password_salt`, `persistence_token`, `email`, `created_at`) VALUES('2010-07-22 21:53:41', '32895aeb1e37bfbe9f25ac01ea397d7a495d03c31f6dce6ccb17e0ee7e580b44dc3966c98f59b2a343861de0ff5f214da5d8c5c2d2a53a578e5902557135d29c', 'werwer', 'ECQRu-KanfuLo6n8CDhM', '7d996596611ce882e6cfbe28154460b1ee99e6bd8953bdb4c029d5cfb19c33d41112cd0b4ab25a2d7535f332c9fc2172fc55b68fb7f7395dd59969245c319025', 'werwerw@hotmail.com', '2010-07-22 21:53:41')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 43ms (DB: 4) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 16:53:41) [GET]
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0x21c521c>) on line #3 of app/views/users/index.html.haml:
+1: - flash.each do |name, msg|
+2:     = content_tag :div, msg, :id => "flash_#{name}"
+3: - if current_user
+4:     = link_to "Edit Profile", edit_user_path(:current)
+5:     |
+6:     = link_to "Logout", logout_path
+
+    app/views/users/index.html.haml:3:in `_run_haml_app47views47users47index46html46haml'
+    haml (3.0.13) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.13) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/mgalv/.rvm/rubies/ruby-1.8.6-p399/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 17:20:09) [GET]
+Rendering users/index
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '7d996596611ce882e6cfbe28154460b1ee99e6bd8953bdb4c029d5cfb19c33d41112cd0b4ab25a2d7535f332c9fc2172fc55b68fb7f7395dd59969245c319025') LIMIT 1[0m
+Completed in 41ms (View: 37, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-07-22 17:20:16) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '7d996596611ce882e6cfbe28154460b1ee99e6bd8953bdb4c029d5cfb19c33d41112cd0b4ab25a2d7535f332c9fc2172fc55b68fb7f7395dd59969245c319025') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 22ms (DB: 2) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 17:20:16) [GET]
+Rendering users/index
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 18ms (View: 14, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-22 17:20:18) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+Completed in 109ms (View: 11, DB: 2) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-22 17:20:24) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"a@a.com", "password"=>"1234"}, "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.username) = 'a@a.com') LIMIT 1[0m
+Rendering user_sessions/new
+Completed in 24ms (View: 6, DB: 3) | 200 OK [http://localhost/user_sessions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-22 17:20:33) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered users/_form (10.1ms)
+Completed in 32ms (View: 20, DB: 2) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-22 17:20:48) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"1234", "username"=>"aaa", "password"=>"1234", "email"=>"aaa@aaa.com"}, "commit"=>"Submit", "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'aaa@aaa.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'aaa') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'dc2d0e03ab587c92d542592904661f8ce7d8402cc5f881c3d1421719482561adec0a584a7beb8fc769930f43a4b0f2d406940566e941dac29b2a6d94e5d58725') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `crypted_password`, `username`, `password_salt`, `persistence_token`, `email`, `created_at`) VALUES('2010-07-22 22:20:48', 'b0f8b23356dcb61e6bb7f56b1bce9974a29ca40facbc1827dcb9f2e08e615d023028a691ee0d36ab27d1aefda78afe860c70b74f5cfc63512cf4ff4ef81bb021', 'aaa', 'i6i5RBB42AUgyNgYMhd2', 'dc2d0e03ab587c92d542592904661f8ce7d8402cc5f881c3d1421719482561adec0a584a7beb8fc769930f43a4b0f2d406940566e941dac29b2a6d94e5d58725', 'aaa@aaa.com', '2010-07-22 22:20:48')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 4) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 17:20:48) [GET]
+Rendering users/index
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'dc2d0e03ab587c92d542592904661f8ce7d8402cc5f881c3d1421719482561adec0a584a7beb8fc769930f43a4b0f2d406940566e941dac29b2a6d94e5d58725') LIMIT 1[0m
+Completed in 22ms (View: 18, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-07-22 17:21:22) [GET]
+  Parameters: {"id"=>"current"}
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'dc2d0e03ab587c92d542592904661f8ce7d8402cc5f881c3d1421719482561adec0a584a7beb8fc769930f43a4b0f2d406940566e941dac29b2a6d94e5d58725') LIMIT 1[0m
+Rendering users/edit
+Completed in 27ms (View: 6, DB: 2) | 200 OK [http://localhost/users/current/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-07-22 17:21:27) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'dc2d0e03ab587c92d542592904661f8ce7d8402cc5f881c3d1421719482561adec0a584a7beb8fc769930f43a4b0f2d406940566e941dac29b2a6d94e5d58725') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 102ms (DB: 2) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 17:21:27) [GET]
+Rendering users/index
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 18ms (View: 14, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-22 17:23:01) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+Completed in 20ms (View: 5, DB: 2) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-22 17:23:13) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"aaa@aaa.com", "password"=>"1234"}, "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.username) = 'aaa@aaa.com') LIMIT 1[0m
+Rendering user_sessions/new
+Completed in 23ms (View: 6, DB: 2) | 200 OK [http://localhost/user_sessions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-22 17:23:17) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"aaa", "password"=>""}, "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+Completed in 22ms (View: 6, DB: 2) | 200 OK [http://localhost/user_sessions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-22 17:23:21) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"aaa", "password"=>"1234"}, "authenticity_token"=>"HcFNAXjt1T5SD8vePBE1JksfqOf1w47pFAtbS8DcQio="}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.username) = 'aaa') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 21ms (DB: 2) | 302 Found [http://localhost/user_sessions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-22 17:23:21) [GET]
+Rendering users/index
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+Completed in 23ms (View: 17, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-07-22 17:23:23) [GET]
+  Parameters: {"id"=>"current"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+Rendering users/edit
+Rendered users/_form (84.2ms)
+Completed in 110ms (View: 90, DB: 2) | 200 OK [http://localhost/users/current/edit]
